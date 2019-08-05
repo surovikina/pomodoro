@@ -1,0 +1,125 @@
+<div class="popup__item">
+  <div class="popup__controls">
+    <div class="popup__controls-left">
+      {{#if deleteIcon}}
+        <button class="form-btn"><span class="icon icon-trash"></span></button>
+      {{/if}}
+    </div>
+    <div class="popup__controls-right">
+      <button class="form-btn"><span class="icon icon-close"></span></button>
+      <button class="form-btn"><span class="icon icon-check"></span></button>
+    </div>
+  </div>
+  <h1 class="popup__header">{{title}}</h1>
+  <form action="" class="popup__form form">
+    <div class="form__group">
+      <label class="form__group-title" for="title">
+        Title
+      </label>
+      <input id="title" class="form__group-input" type="text" placeholder="Add title here">
+    </div>
+
+    <div class="form__group">
+      <label class="form__group-title" for="desk">
+        Description
+      </label>
+      <input id="desk" class="form__group-input" type="text" placeholder="Add description here">
+    </div>
+
+    <div class="form__group">
+      <fieldset class="fieldset">
+        <legend class="form__group-title">Category</legend>
+        <label class="radio  radio--work">
+          <input class="radio__input" type="radio" name="category" value="work" {{#if defaultChecked}}checked{{/if}} >
+          <span class="radio__box"></span>
+          <span>Work</span>
+
+        </label>
+        <label class="radio radio--education">
+          <input class="radio__input" type="radio" name="category" value="education">
+          <span class="radio__box"></span>
+          <span>Education</span>
+        </label>
+
+        <label class="radio radio--hobby">
+          <input class="radio__input" type="radio" name="category" value="hobby">
+          <span class="radio__box"></span>
+          <span>Hobby</span>
+        </label>
+
+        <label class="radio radio--sport">
+          <input class="radio__input" type="radio" name="category" value="sport">
+          <span class="radio__box"></span>
+          <span>Sport</span>
+        </label>
+
+        <label class="radio radio--other">
+          <input class="radio__input" type="radio" name="category" value="other">
+          <span class="radio__box"></span>
+          <span>Other</span>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="form__group">
+      <label class="form__group-title" for="deadline">
+        Deadline
+      </label>
+      <input id="deadline" type="text" class="text" placeholder="">
+    </div>
+
+    <div class="form__group" id="form-estimation">
+      <fieldset class="fieldset">
+        <legend class="form__group-title radio-tomato">ESTIMATION</legend>
+        <label class="radio-tomato__label">
+          <input class="radio-tomato__input{{#if defaultChecked}} is-checked {{/if}}" type="radio" name="estimation" value="1">
+          <span class="radio-tomato__box"></span>
+        </label>
+        <label class="radio-tomato__label">
+          <input class="radio-tomato__input {{#if defaultChecked}} is-checked {{/if}}" type="radio" name="estimation" value="2">
+          <span class="radio-tomato__box"></span>
+        </label>
+        <label class="radio-tomato__label">
+          <input class="radio-tomato__input {{#if defaultChecked}} is-checked {{/if}}" type="radio" name="estimation" value="3" checked>
+          <span class="radio-tomato__box"></span>
+        </label>
+        <label class="radio-tomato__label">
+          <input class="radio-tomato__input" type="radio" name="estimation" value="4">
+          <span class="radio-tomato__box"></span>
+        </label>
+        <label class="radio-tomato__label">
+          <input class="radio-tomato__input" type="radio" name="estimation" value="5" >
+          <span class="radio-tomato__box"></span>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="form__group">
+      <fieldset class="fieldset">
+        <legend class="form__group-title">Priority</legend>
+        <label class="radio  radio--urgent">
+          <input class="radio__input" type="radio" name="priority" value="urgent">
+          <span class="radio__box"></span>
+          <span>Urgent</span>
+        </label>
+        <label class="radio radio--high">
+          <input class="radio__input" type="radio" name="priority" value="high" {{#if defaultChecked}}checked{{/if}}>
+          <span class="radio__box"></span>
+          <span>High</span>
+        </label>
+
+        <label class="radio radio--middle">
+          <input class="radio__input" type="radio" name="priority" value="middle">
+          <span class="radio__box"></span>
+          <span>Middle</span>
+        </label>
+
+        <label class="radio radio--low">
+          <input class="radio__input" type="radio" name="priority" value="low">
+          <span class="radio__box"></span>
+          <span>Low</span>
+        </label>
+      </fieldset>
+    </div>
+  </form>
+</div>

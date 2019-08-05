@@ -1,0 +1,128 @@
+@import ( reference ) '~@less-helpers-module/_variables.less';
+@import ( reference ) '~@less-helpers-module/_mixins.less';
+
+.header {
+  //padding-top: 56/@rem;
+  padding-top: 66/@rem; //added
+  padding-bottom: 21/@rem;
+  height: @header-height;
+  background-color: @color-madison;
+  z-index: @global-z-index;
+  transition: max-height .5s;
+  max-height: 0;
+  .laptop({
+    padding-top: 70/@rem;
+  });
+
+  .mobile-landscape({
+    padding-top: 70/@rem;
+  });
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+
+  .logo {
+    display: none;
+    width: 242/@rem;
+    height: 74/@rem;
+  }
+
+  .icon-add {
+    display: none;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-height: @header-height-big;
+    padding: 0;
+    background-color: @color-border-header;
+    border: solid 1px #223849;
+    box-shadow: 0 5px 8.3px 1.7px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+
+    .logo {
+      display: block;
+    }
+
+    .icon-add {
+      display: block;
+    }
+  }
+}
+
+
+
+.nav {
+  flex: 1 0 auto;
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__item-notification {
+    position: absolute;
+    bottom: -12/@rem;
+    left: 6/@rem;
+    display: block;
+    width: 20/@rem;
+    height: 20/@rem;
+    font-size: 14/@rem;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 50%;
+    background-color: @color-tomato;
+    color: @color-white;
+    cursor: pointer;
+    .laptop({
+      width: 31/@rem;
+      height: 31/@rem;
+      font-size: 22/@rem;
+    });
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    color: @color-nepal;
+    .laptop({
+      font-size: 26px;
+    });
+
+    .mobile-landscape({
+      font-size: 26px;
+    });
+
+  }
+
+  &__link.hidden {
+    display: none;
+  }
+
+  &__link:hover {
+    color: @color-spray;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 33/@rem;
+    .laptop({
+      margin-right: 44/@rem;
+    });
+
+    .mobile-landscape({
+      margin-right: 44/@rem;
+    });
+  }
+}

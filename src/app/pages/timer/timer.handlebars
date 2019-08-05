@@ -1,0 +1,51 @@
+<section class="main__container container">
+    <div class="main__header-top main__header-top--timer">
+        <h1 class="main__header">1. {{title}} </h1>
+    </div>
+    <div class="main__header-bottom main__header-bottom--timer">
+        <p class="main__sub-title">{{desk}} </p>
+    </div>
+    <div class="main__timer-btn">
+        <button id="add-pomodoro"><span class="icon icon-add"></span></button>
+    </div>
+    <div class="main__timer">
+        <div class="main__timer-ellipse main__timer-ellipse--{{category}}-category ">
+            <div class="main__timer-info">
+                <span class="main__timer-info-text hidden">Break</span>
+                <span class="main__timer-info-message">Let’s do it!</span>
+                <span class="main__timer-info-time"></span>
+                <span class="main__timer-min hidden">min</span>
+            </div>
+        </div>
+
+      <div  class="main__timer-circle-animation" id="circle">
+        <svg
+          class="progress-ring"
+          height="254"
+          width="254"
+        >
+          <circle
+            class="progress-ring__circle"
+            stroke-width="33"
+            fill="transparent"
+            r="94"
+            cx="127"
+            cy="127"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="main__nav-holder main__nav-holder--margin btn-timer-group">
+        <button class="btn btn--green hidden" id="btn-start">Start</button>
+        <button class="btn btn--red hidden" id="btn-fail">Fail Pomodora</button>
+        <button class="btn btn--green hidden" id="btn-finish">Finish Pomodora</button>
+        <button class="btn btn--green hidden" id="btn-start-pomodoro">Start Pomodora</button>
+        <button class="btn btn--blue hidden" id="btn-finish-task">Finish Task</button>
+    </div>
+</section>
+<div class="arrow-control arrow-control--prev">
+    <span class="icon icon-arrow-left"></span>
+</div>
+<div class="arrow-control arrow-control--next hidden">
+    <span class="icon icon-arrow-right"></span>
+</div>

@@ -1,0 +1,30 @@
+<div class="tasks__item tasks__item--priority-{{priority}} tasks__item--category-{{category}}" id ="{{id}}">
+  <div class="tasks__date">
+    <div class="tasks__date-value">
+      <strong class="tasks__date-number">{{deadlineDay}}</strong> {{deadlineMonth}}
+    </div>
+    <div class="tasks__icons-remove">
+      <span class="icon icon-trash"></span>
+      <span class="icon icon-close"></span>
+    </div>
+  </div>
+  <div class="tasks__text">
+    <h3 class="tasks__header">{{title}}</h3>
+    <p class="tasks__desk">{{desk}}</p>
+  </div>
+  <button class="tasks__edit-btn">
+    {{#if statusDaily}}
+      <span class="icon icon-arrows-up"></span>
+    {{/if}}
+    <span class="icon icon-edit"></span>
+  </button>
+  <div class="tasks__estimation">
+    <div class="tasks__estimation-timer">
+      <span class="icon icon-timer"></span>
+    </div>
+    <div class="tasks__estimation-value">
+      <span class="icon icon-tomato"></span>
+      <span class="tasks__estimation-number">{{estimation}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+@import ( reference ) '~@less-helpers-module/_variables.less';
+
+.opacity (@opacity: 0.5) {
+  -webkit-opacity: @opacity;
+  -moz-opacity: @opacity;
+  opacity: @opacity;
+}
+
+.right-content {
+  justify-content: flex-end;
+}
+
+.left-content {
+  justify-content: flex-start;
+}
+
+.justify-content {
+  justify-content: space-between;
+}
+
+.color-notification(@color) {
+  background-color: @color;
+  &__icon {
+    background-color: @color;
+  }
+}
+
+.radio(@check-color) {
+  // Checked
+  .radio__input:checked + .radio__box {
+    box-shadow: 0 0 0 5px @check-color;
+    background-color: @color-madison;
+
+    &:before {
+      position: relative;
+      right: -3px;
+      top: 3px;
+      display: block;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: @check-color;
+    }
+  }
+  // Disabled
+  &:disabled + .check__box {
+    background-color: lighten(@check-color, 50%);
+  }
+}
+
+.color(@color) {
+  .tasks__header {
+    color: @color;
+  }
+
+  .tasks__estimation {
+    background-color: @color;
+  }
+}
+
+.color-hover(@color) {
+  .tasks__header {
+    color: @color;
+  }
+
+  .tasks__estimation {
+    background-color: @color;
+  }
+}
+
+.color-category(@color) {
+  .tasks__date {
+    border-left: 9/@rem solid @color;
+  }
+}
+
+.color-category-bg(@color, @hover-color) {
+  .tasks__date {
+    background-color: @color;
+  }
+
+  .tasks__date:hover {
+    background-color: @hover-color;
+  }
+}
+
+.color-category-hover(@color) {
+  .tasks__date {
+    border-left: 9/@rem solid @color;
+  }
+}
+
+.border-color(@color){
+  border: 5px solid @color;
+}
+
+.laptop(@rules) {
+  @media (max-width: @breakpoint-large) {
+    @rules();
+  }
+}
+
+.mobile-landscape(@rules) {
+  @media (max-device-width: @breakpoint-landscape) and (orientation: landscape)   {
+    @rules();
+  }
+}
+
+.mobile(@rules) {
+  @media (max-width: @breakpoint-medium) {
+    @rules();
+  }
+}
+
